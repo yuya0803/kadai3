@@ -3,7 +3,7 @@
 
 int main()
 {
-    int x[2][1], y[2][1], A[2][2], B[2][2], sum1[2][1], sum2, sum3[2][1], sum4[2][1], sum5[2][2], sum6[2][2], sum7[2][2];
+    int x[2][1], y[2][1], A[2][2], B[2][2], sum1[2][1], sum2=0, sum3[2][1], sum4[2][1], sum5[2][2], sum6[2][2], sum7[2][2];
     x[0][0]=5; x[1][0]=7;
     y[0][0]=2; y[1][0]=3;
     A[0][0]=1; A[1][0]=4; A[0][1]=3; A[1][1]=2;
@@ -21,7 +21,13 @@ int main()
     }
     
     printf("toi3 (2)\n");
-    sum2=toi32(i,j);
+    for(i=0; i<2; i++)
+    {
+        for(j=0; j<1; j++)
+        {
+            sum2=sum2+x[i][j]*y[i][j];
+        }
+    }
     printf("%d\n",sum2);
 
     printf("toi3 (3)\n");
@@ -29,12 +35,14 @@ int main()
     {
         for(j=0; j<1; j++)
         {
+            /*xを転置*/
             sum3[i][j]=x[j][i]*y[i][j];
             printf("[%d][%d]=%d\n",i+1,j+1,sum3[i][j]);
         }
     }
 
     printf("toi3 (4)\n");
+   /*行列の項を計算*/
     for(i=0; i<2; i++)
      {
         for(j=0; j<1; j++)
@@ -55,6 +63,7 @@ int main()
         }
     }
      printf("toi3 (5)\n");
+     /*行列の項を計算*/
      for(i=0; i<2; i++)
      {
         for(j=0; j<2; j++)
@@ -76,6 +85,7 @@ int main()
     }
 
     printf("toi3 (6)\n");
+    /*行列の項を計算*/
     for(i=0; i<2; i++)
      {
         for(j=0; j<2; j++)
@@ -124,6 +134,7 @@ int main()
              }
         }
      }
+     /*計算した行列を転置*/
      for(i=0; i<2; i++)
     {
         for(j=0; j<2; j++)

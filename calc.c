@@ -12,7 +12,7 @@ int toi31(int i, int j)
             printf("[%d][%d]=%d\n",i+1,j+1,sum1[i][j]);
         }
     }
-};
+}
 
 int toi32(int i, int j)
 {
@@ -24,6 +24,5 @@ int toi32(int i, int j)
             sum2=sum2+x[i][j]*y[i][j];
         }
     }
-
     return sum2;
 }
